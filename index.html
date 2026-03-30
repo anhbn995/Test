@@ -1,0 +1,1464 @@
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>Specialized Position Duplicates Report</title>
+                
+        <style>
+            body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 40px; }
+            .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+            h2 { color: #0f172a; font-size: 24px; margin-bottom: 8px; }
+            p { color: #64748b; margin-bottom: 24px; }
+            .stats { display: flex; gap: 20px; margin-bottom: 24px; }
+            .stat-card { background: #f1f5f9; padding: 16px 24px; border-radius: 12px; border: 1px solid #e2e8f0; }
+            .stat-value { display: block; font-size: 20px; font-weight: 700; color: #3b82f6; }
+            .stat-label { font-size: 13px; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+            table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 10px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+            th { background-color: #f8fafc; color: #475569; font-weight: 600; text-align: left; padding: 12px 16px; border-bottom: 2px solid #e2e8f0; font-size: 14px; position: sticky; top: 0; }
+            td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #334155; }
+            
+            /* Màu nền cho các nhóm */
+            .row-group-a { background-color: #ffffff; }
+            .row-group-b { background-color: #f1f5f9; }
+            
+            tr:hover td { filter: brightness(0.95); }
+            .sp-tag { font-weight: 600; color: #2563eb; background: #dbeafe; padding: 2px 8px; border-radius: 4px; border: 1px solid #bfdbfe; }
+        </style>
+        
+            </head>
+            <body>
+                <div class="container">
+                    <h2>Báo cáo Trùng lặp Specialized Position</h2>
+                    <p>Các hàng có cùng <b>specialized_position</b> sẽ có cùng màu nền để dễ nhận diện theo nhóm.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-card">
+                            <span class="stat-value">694</span>
+                            <span class="stat-label">Tổng số bộ ba duy nhất</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">200</span>
+                            <span class="stat-label">Số bộ ba bị trùng Position</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">88</span>
+                            <span class="stat-label">Số Position bị trùng</span>
+                        </div>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Job Sector</th>
+                                <th>Job Role</th>
+                                <th>Specialized Position</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                <tr class="row-group-a">
+                    <td>IT</td>
+                    <td>Software Design</td>
+                    <td><span class="sp-tag">3D Modeler</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Marketing/PR/Quảng cáo</td>
+                    <td>Quảng cáo/Sáng tạo</td>
+                    <td><span class="sp-tag">3D Modeler</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Buồng phòng</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Buồng phòng</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Kỹ thuật (Sales Engineer)</td>
+                    <td><span class="sp-tag">Bán hàng kỹ thuật cơ khí</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Sản xuất</td>
+                    <td>Sản xuất khác</td>
+                    <td><span class="sp-tag">Bán hàng kỹ thuật cơ khí</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Kỹ thuật (Sales Engineer)</td>
+                    <td><span class="sp-tag">Bán hàng kỹ thuật Điện/Điện tử/Viễn thông</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Điện/Điện tử/Viễn thông khác</td>
+                    <td><span class="sp-tag">Bán hàng kỹ thuật Điện/Điện tử/Viễn thông</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ</td>
+                    <td><span class="sp-tag">Bán hàng điện máy</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Bán lẻ/Dịch vụ tiêu dùng</td>
+                    <td><span class="sp-tag">Bán hàng điện máy</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ/Dịch vụ đời sống khác</td>
+                    <td><span class="sp-tag">Bán vé máy bay (Ticketing/Booker)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Nhà hàng/Khách sạn/Du lịch</td>
+                    <td><span class="sp-tag">Bán vé máy bay (Ticketing/Booker)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Sales Nhà hàng/Khách sạn/Du lịch</td>
+                    <td><span class="sp-tag">Bán vé máy bay (Ticketing/Booker)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Tài xế/Lái xe</td>
+                    <td><span class="sp-tag">Bưu tá</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Kho vận/Giao hàng</td>
+                    <td><span class="sp-tag">Bưu tá</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ bà mẹ trẻ em</td>
+                    <td><span class="sp-tag">Bảo mẫu/Người trông trẻ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Vệ sinh/Giúp việc/Bảo mẫu</td>
+                    <td><span class="sp-tag">Bảo mẫu/Người trông trẻ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ an ninh và bảo trì</td>
+                    <td><span class="sp-tag">Bảo trì tòa nhà</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Bảo trì tòa nhà</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ an ninh và bảo trì</td>
+                    <td><span class="sp-tag">Bảo vệ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Bảo vệ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Admin/Sales Support</td>
+                    <td><span class="sp-tag">Chuyên viên đấu thầu</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Logistics/Thu mua/Kho/Vận tải</td>
+                    <td>Thu mua/Mua hàng</td>
+                    <td><span class="sp-tag">Chuyên viên đấu thầu</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Công nhân</td>
+                    <td><span class="sp-tag">Công nhân chăn nuôi</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Năng lượng/Môi trường/Nông nghiệp</td>
+                    <td>Nông/Lâm/Ngư nghiệp</td>
+                    <td><span class="sp-tag">Công nhân chăn nuôi</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Công nhân</td>
+                    <td><span class="sp-tag">Công nhân môi trường</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Năng lượng/Môi trường/Nông nghiệp</td>
+                    <td>An toàn lao động/Môi trường</td>
+                    <td><span class="sp-tag">Công nhân môi trường</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Công nhân</td>
+                    <td><span class="sp-tag">Công nhân sản xuất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Sản xuất</td>
+                    <td>Thợ kỹ thuật</td>
+                    <td><span class="sp-tag">Công nhân sản xuất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Sản xuất</td>
+                    <td>Vận hành sản xuất</td>
+                    <td><span class="sp-tag">Công nhân sản xuất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Công nhân</td>
+                    <td><span class="sp-tag">Công nhân vận hành máy</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Sản xuất</td>
+                    <td>Vận hành sản xuất</td>
+                    <td><span class="sp-tag">Công nhân vận hành máy</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Xây dựng</td>
+                    <td>Công nhân Xây dựng/Cải tạo</td>
+                    <td><span class="sp-tag">Công nhân vận hành máy</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Quản lý/Vận hành dự án kỹ thuật</td>
+                    <td><span class="sp-tag">Công nhân vận hành máy</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Vận hành và bảo trì/Hỗ trợ kỹ thuật</td>
+                    <td><span class="sp-tag">Công nhân vận hành máy</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>IT</td>
+                    <td>Data Science</td>
+                    <td><span class="sp-tag">Data Analyst</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Marketing/PR/Quảng cáo</td>
+                    <td>Market Research and Analysis</td>
+                    <td><span class="sp-tag">Data Analyst</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Dược/Y tế/Sức khỏe/Công nghệ sinh học</td>
+                    <td>Dược phẩm/Công nghệ sinh học</td>
+                    <td><span class="sp-tag">Dược sĩ/Bán thuốc</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Dược/Y tế/Sức khoẻ/Làm đẹp</td>
+                    <td><span class="sp-tag">Dược sĩ/Bán thuốc</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Logistics/Thu mua/Kho/Vận tải</td>
+                    <td>Vận tải</td>
+                    <td><span class="sp-tag">Giám sát/Điều phối vận tải</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài xế</td>
+                    <td>Vận tải</td>
+                    <td><span class="sp-tag">Giám sát/Điều phối vận tải</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>HR/Admin/Legal</td>
+                    <td>Pháp chế</td>
+                    <td><span class="sp-tag">Giám đốc pháp chế</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Luật</td>
+                    <td>Dịch vụ pháp chế (In-house)</td>
+                    <td><span class="sp-tag">Giám đốc pháp chế</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Giáo viên Giáo dục thể chất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Giáo viên/Giảng viên/Gia sư</td>
+                    <td><span class="sp-tag">Giáo viên Giáo dục thể chất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Giáo viên Giáo dục thể chất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ/Dịch vụ đời sống khác</td>
+                    <td><span class="sp-tag">Giáo viên dạy lái xe ô tô</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Giáo dục/Đào tạo khác</td>
+                    <td><span class="sp-tag">Giáo viên dạy lái xe ô tô</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Giáo viên dạy nhảy/múa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Giáo viên/Giảng viên/Gia sư</td>
+                    <td><span class="sp-tag">Giáo viên dạy nhảy/múa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ/Dịch vụ đời sống khác</td>
+                    <td><span class="sp-tag">Giáo viên dạy nấu ăn</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Giáo dục/Đào tạo khác</td>
+                    <td><span class="sp-tag">Giáo viên dạy nấu ăn</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ vệ sinh/nhà cửa</td>
+                    <td><span class="sp-tag">Giúp việc</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Vệ sinh/Giúp việc/Bảo mẫu</td>
+                    <td><span class="sp-tag">Giúp việc</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Giặt là</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Giặt là</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên Thể hình (PT)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên Thể hình (PT)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bóng bàn</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bóng bàn</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bóng rổ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bóng rổ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bóng đá</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bóng đá</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bơi lội</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên bơi lội</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên quyền anh (Boxing)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên quyền anh (Boxing)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên trượt patin</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Giáo dục/Đào tạo</td>
+                    <td>Thể chất/Thể hình</td>
+                    <td><span class="sp-tag">Huấn luyện viên trượt patin</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>IT</td>
+                    <td>Software Design</td>
+                    <td><span class="sp-tag">Illustration</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Marketing/PR/Quảng cáo</td>
+                    <td>Quảng cáo/Sáng tạo</td>
+                    <td><span class="sp-tag">Illustration</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ</td>
+                    <td><span class="sp-tag">Kinh doanh kênh GT</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Bán lẻ/Dịch vụ tiêu dùng</td>
+                    <td><span class="sp-tag">Kinh doanh kênh GT</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ</td>
+                    <td><span class="sp-tag">Kinh doanh kênh MT</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Bán lẻ/Dịch vụ tiêu dùng</td>
+                    <td><span class="sp-tag">Kinh doanh kênh MT</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Điện/Điện tử/Viễn thông</td>
+                    <td><span class="sp-tag">Kinh doanh thiết bị công nghiệp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Sales Điện/Điện tử/Viễn thông</td>
+                    <td><span class="sp-tag">Kinh doanh thiết bị công nghiệp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Điện/Điện tử/Viễn thông</td>
+                    <td><span class="sp-tag">Kinh doanh điện mặt trời</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Sales Điện/Điện tử/Viễn thông</td>
+                    <td><span class="sp-tag">Kinh doanh điện mặt trời</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Thiết kế</td>
+                    <td>Thiết kế Nhà/Nội thất/Môi trường</td>
+                    <td><span class="sp-tag">Kiến trúc sư</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Xây dựng</td>
+                    <td>Thiết kế và Kiến trúc</td>
+                    <td><span class="sp-tag">Kiến trúc sư</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Xây dựng</td>
+                    <td>Thiết kế và Kiến trúc</td>
+                    <td><span class="sp-tag">Kỹ sư HVAC</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Nhiệt/Gió/Điều hoà (HVAC-R)</td>
+                    <td><span class="sp-tag">Kỹ sư HVAC</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Năng lượng/Môi trường/Nông nghiệp</td>
+                    <td>An toàn lao động/Môi trường</td>
+                    <td><span class="sp-tag">Kỹ sư an toàn lao động (HSE)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Xây dựng</td>
+                    <td>Quản lý dự án xây dựng</td>
+                    <td><span class="sp-tag">Kỹ sư an toàn lao động (HSE)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Xây dựng</td>
+                    <td>Thiết kế và Kiến trúc</td>
+                    <td><span class="sp-tag">Kỹ sư cơ điện</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Điện/Tự động hoá</td>
+                    <td><span class="sp-tag">Kỹ sư cơ điện</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Sản xuất</td>
+                    <td>Thợ kỹ thuật</td>
+                    <td><span class="sp-tag">Kỹ sư thiết kế điện</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Điện/Tự động hoá</td>
+                    <td><span class="sp-tag">Kỹ sư thiết kế điện</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Sản xuất</td>
+                    <td>Thiết kế/chế tạo máy</td>
+                    <td><span class="sp-tag">Kỹ sư tự động hóa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Điện/Tự động hoá</td>
+                    <td><span class="sp-tag">Kỹ sư tự động hóa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Năng lượng/Môi trường/Nông nghiệp</td>
+                    <td>Năng lượng/Địa chất</td>
+                    <td><span class="sp-tag">Kỹ sư địa chất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Xây dựng</td>
+                    <td>Quản lý dự án xây dựng</td>
+                    <td><span class="sp-tag">Kỹ sư địa chất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ làm đẹp</td>
+                    <td><span class="sp-tag">Kỹ thuật viên Spa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Chăm sóc sức khỏe/Làm đẹp</td>
+                    <td><span class="sp-tag">Kỹ thuật viên Spa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Vận hành và bảo trì/Hỗ trợ kỹ thuật</td>
+                    <td><span class="sp-tag">Kỹ thuật điện/điện tử</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Điện tử/Phần cứng</td>
+                    <td><span class="sp-tag">Kỹ thuật điện/điện tử</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>HR/Admin/Legal</td>
+                    <td>Hành chính</td>
+                    <td><span class="sp-tag">Lễ tân/Đón tiếp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Lễ tân/Đón tiếp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Lễ tân/Đón tiếp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Lễ tân/Đón tiếp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Marketing/PR/Quảng cáo</td>
+                    <td>Market Research and Analysis</td>
+                    <td><span class="sp-tag">Nghiên cứu thị trường (Market Research)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tư vấn chuyên môn</td>
+                    <td>Tư vấn/Phân tích chuyên môn</td>
+                    <td><span class="sp-tag">Nghiên cứu thị trường (Market Research)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ vệ sinh/nhà cửa</td>
+                    <td><span class="sp-tag">Nhân viên dọn vệ sinh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Vệ sinh/Giúp việc/Bảo mẫu</td>
+                    <td><span class="sp-tag">Nhân viên dọn vệ sinh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Kho vận/Giao hàng</td>
+                    <td><span class="sp-tag">Nhân viên kho</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Logistics/Thu mua/Kho/Vận tải</td>
+                    <td>Kho vận</td>
+                    <td><span class="sp-tag">Nhân viên kho</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ chăm sóc sức khỏe</td>
+                    <td><span class="sp-tag">Nhân viên massage</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Chăm sóc sức khỏe/Làm đẹp</td>
+                    <td><span class="sp-tag">Nhân viên massage</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Nhân viên đỗ xe (Valet Parking)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Khách sạn/Dịch vụ cư trú</td>
+                    <td><span class="sp-tag">Nhân viên đỗ xe (Valet Parking)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Tiếp thị/Bán hàng</td>
+                    <td><span class="sp-tag">Nhập liệu</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Phim và truyền hình/Báo chí/Xuất bản</td>
+                    <td>Biên tập/Viết/Xuất bản</td>
+                    <td><span class="sp-tag">Nhập liệu</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Pha chế (Barista)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Pha chế (Barista)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ/Dịch vụ đời sống khác</td>
+                    <td><span class="sp-tag">Photographer/Video Editor</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Marketing/PR/Quảng cáo</td>
+                    <td>Quảng cáo/Sáng tạo</td>
+                    <td><span class="sp-tag">Photographer/Video Editor</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Phụ bếp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Phụ bếp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Phục vụ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Phục vụ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ</td>
+                    <td><span class="sp-tag">Quản lý cửa hàng/Cửa hàng trưởng</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Quản lý kinh doanh</td>
+                    <td><span class="sp-tag">Quản lý cửa hàng/Cửa hàng trưởng</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ/Dịch vụ đời sống khác</td>
+                    <td><span class="sp-tag">Sales Tour/Kinh doanh du lịch</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Nhà hàng/Khách sạn/Du lịch</td>
+                    <td><span class="sp-tag">Sales Tour/Kinh doanh du lịch</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Dịch vụ du lịch</td>
+                    <td><span class="sp-tag">Sales Tour/Kinh doanh du lịch</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Sales Nhà hàng/Khách sạn/Du lịch</td>
+                    <td><span class="sp-tag">Sales Tour/Kinh doanh du lịch</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Xuất nhập khẩu/Logistics</td>
+                    <td><span class="sp-tag">Sales Xuất nhập khẩu/Logistics khác</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Logistics/Thu mua/Kho/Vận tải</td>
+                    <td>Sales Xuất nhập khẩu/Logistics</td>
+                    <td><span class="sp-tag">Sales Xuất nhập khẩu/Logistics khác</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ</td>
+                    <td><span class="sp-tag">Sales thể tập</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Bán lẻ/Dịch vụ tiêu dùng</td>
+                    <td><span class="sp-tag">Sales thể tập</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ an ninh và bảo trì</td>
+                    <td><span class="sp-tag">Sửa chữa điện thoại</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Sửa chữa điện thoại</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ an ninh và bảo trì</td>
+                    <td><span class="sp-tag">Sửa chữa/Bảo trì điện nước</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Sửa chữa/Bảo trì điện nước</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Vận hành và bảo trì/Hỗ trợ kỹ thuật</td>
+                    <td><span class="sp-tag">Sửa chữa/Bảo trì điện tử/viễn thông</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Điện tử/Phần cứng</td>
+                    <td><span class="sp-tag">Sửa chữa/Bảo trì điện tử/viễn thông</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Thiết kế</td>
+                    <td>Thiết kế Nhà/Nội thất/Môi trường</td>
+                    <td><span class="sp-tag">Thiết kế nội thất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Xây dựng</td>
+                    <td>Thiết kế và Kiến trúc</td>
+                    <td><span class="sp-tag">Thiết kế nội thất</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Sản xuất</td>
+                    <td>May mặc/Dệt may/Da</td>
+                    <td><span class="sp-tag">Thiết kế rập</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Thiết kế</td>
+                    <td>Thiết kế Thời trang</td>
+                    <td><span class="sp-tag">Thiết kế rập</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ</td>
+                    <td><span class="sp-tag">Thu ngân</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Tiếp thị/Bán hàng</td>
+                    <td><span class="sp-tag">Thu ngân</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Thu ngân</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ làm đẹp</td>
+                    <td><span class="sp-tag">Thợ cắt tóc</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Chăm sóc sức khỏe/Làm đẹp</td>
+                    <td><span class="sp-tag">Thợ cắt tóc</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Thợ làm bánh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Thợ làm bánh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ làm đẹp</td>
+                    <td><span class="sp-tag">Thợ nail/mi</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Chăm sóc sức khỏe/Làm đẹp</td>
+                    <td><span class="sp-tag">Thợ nail/mi</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ an ninh và bảo trì</td>
+                    <td><span class="sp-tag">Thợ sửa khóa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Thợ sửa khóa</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ an ninh và bảo trì</td>
+                    <td><span class="sp-tag">Thợ sửa xe</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ ô tô/xe máy/xe điện</td>
+                    <td><span class="sp-tag">Thợ sửa xe</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Thợ sửa xe</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Bán lẻ/Dịch vụ đời sống khác</td>
+                    <td><span class="sp-tag">Thợ thủ công khác</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Thợ thủ công</td>
+                    <td><span class="sp-tag">Thợ thủ công khác</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ làm đẹp</td>
+                    <td><span class="sp-tag">Thợ xăm (Tattoo Artist)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Chăm sóc sức khỏe/Làm đẹp</td>
+                    <td><span class="sp-tag">Thợ xăm (Tattoo Artist)</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Thợ điện</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Điện/Tự động hoá</td>
+                    <td><span class="sp-tag">Thợ điện</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ an ninh và bảo trì</td>
+                    <td><span class="sp-tag">Thợ điện lạnh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Bảo vệ/Bảo trì/Sửa chữa</td>
+                    <td><span class="sp-tag">Thợ điện lạnh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Xây dựng</td>
+                    <td>Công nhân Xây dựng/Cải tạo</td>
+                    <td><span class="sp-tag">Thợ điện lạnh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Điện/Điện tử/Viễn thông</td>
+                    <td>Nhiệt/Gió/Điều hoà (HVAC-R)</td>
+                    <td><span class="sp-tag">Thợ điện lạnh</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Dược/Y tế/Sức khỏe/Công nghệ sinh học</td>
+                    <td>Sales Dược/Y tế/Sức khỏe/Làm đẹp</td>
+                    <td><span class="sp-tag">Trình dược viên</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Dược/Y tế/Sức khoẻ/Làm đẹp</td>
+                    <td><span class="sp-tag">Trình dược viên</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Tài xế</td>
+                    <td><span class="sp-tag">Tài xế container</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Logistics/Thu mua/Kho/Vận tải</td>
+                    <td>Vận tải</td>
+                    <td><span class="sp-tag">Tài xế container</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Sản xuất</td>
+                    <td>Vận hành thiết bị vận tải/thiết bị nặng</td>
+                    <td><span class="sp-tag">Tài xế container</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài xế</td>
+                    <td>Vận tải</td>
+                    <td><span class="sp-tag">Tài xế container</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Tài xế/Lái xe</td>
+                    <td><span class="sp-tag">Tài xế lái xe văn phòng</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Tài xế</td>
+                    <td><span class="sp-tag">Tài xế lái xe văn phòng</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Tài xế</td>
+                    <td>Đưa đón</td>
+                    <td><span class="sp-tag">Tài xế lái xe văn phòng</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Tài xế/Lái xe</td>
+                    <td><span class="sp-tag">Tài xế taxi</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Tài xế</td>
+                    <td><span class="sp-tag">Tài xế taxi</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài xế</td>
+                    <td>Đưa đón</td>
+                    <td><span class="sp-tag">Tài xế taxi</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Tài xế/Lái xe</td>
+                    <td><span class="sp-tag">Tài xế xe khách</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Tài xế</td>
+                    <td><span class="sp-tag">Tài xế xe khách</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Tài xế</td>
+                    <td><span class="sp-tag">Tài xế xe tải</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Logistics/Thu mua/Kho/Vận tải</td>
+                    <td>Vận tải</td>
+                    <td><span class="sp-tag">Tài xế xe tải</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Sản xuất</td>
+                    <td>Vận hành thiết bị vận tải/thiết bị nặng</td>
+                    <td><span class="sp-tag">Tài xế xe tải</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài xế</td>
+                    <td>Vận tải</td>
+                    <td><span class="sp-tag">Tài xế xe tải</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn bảo hiểm</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td>Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn bảo hiểm</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn chứng khoán</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td>Chứng khoán</td>
+                    <td><span class="sp-tag">Tư vấn chứng khoán</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td>Sales Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn chứng khoán</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn tài chính</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td>Sales Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn tài chính</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td>Tài chính</td>
+                    <td><span class="sp-tag">Tư vấn tài chính</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Tư vấn chuyên môn</td>
+                    <td>Tư vấn/Phân tích chuyên môn</td>
+                    <td><span class="sp-tag">Tư vấn tài chính</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Kinh doanh/Bán hàng</td>
+                    <td>Sales Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn đầu tư</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td>Sales Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td><span class="sp-tag">Tư vấn đầu tư</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Tài chính/Ngân hàng/Bảo hiểm</td>
+                    <td>Đầu tư và Tài trợ</td>
+                    <td><span class="sp-tag">Tư vấn đầu tư</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Bán lẻ/Dịch vụ đời sống</td>
+                    <td>Dịch vụ vệ sinh/nhà cửa</td>
+                    <td><span class="sp-tag">Vệ sinh/Tạp vụ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-a">
+                    <td>Lao động phổ thông</td>
+                    <td>Vệ sinh/Giúp việc/Bảo mẫu</td>
+                    <td><span class="sp-tag">Vệ sinh/Tạp vụ</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Lao động phổ thông</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Đầu bếp</span></td>
+                </tr>
+            
+
+                <tr class="row-group-b">
+                    <td>Nhà hàng/Khách sạn/Du lịch</td>
+                    <td>Nhà hàng/Dịch vụ ăn uống</td>
+                    <td><span class="sp-tag">Đầu bếp</span></td>
+                </tr>
+            
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+            </html>
+            
